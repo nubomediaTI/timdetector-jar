@@ -7,12 +7,12 @@ WORKDIR "/tmp"
 RUN \
   apt-get install build-essential && \
   wget http://download.redis.io/redis-stable.tar.gz && \
-  tar xvzf redis-stable.tar.gz 
+  tar xvzf redis-stable.tar.gz
+  cd redis-stable && \
+  make && \
+  make install && \
   #cd /tmp && \
 #  && \
-#  cd redis-stable && \
-#  make && \
-#  make install && \
 #  cp -f src/redis-sentinel /usr/local/bin && \
 #  mkdir -p /etc/redis && \
 #  cp -f *.conf /etc/redis && \
